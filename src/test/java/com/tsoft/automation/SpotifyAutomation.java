@@ -40,34 +40,26 @@ public class SpotifyAutomation {
 
         //Data registration
 
-        String email = "name_test_tsoft@tsoft.com";
-        String password = "secret_password_tsoft";
-        String name = "tsoft_user_automation";
+        String email = "name_test_996@testing.com";
+        String password = "secret_password_testing";
+        String name = "testing_user_automation96";
         String day = "20";
         String year = "1996";
 
         //Set information and complete registration
 
-        By emailLocator = By.id("email");
-        By confirmLocator = By.id("confirm");
-        By passLocator = By.id("password");
-        By nameLocator = By.id("displayname");
-        By dayLocator = By.id("day");
-        By monthListLocator = By.id("month");
-        By yearLocator = By.id("year");
-
-        driver.findElement(emailLocator).sendKeys(email);
-        driver.findElement(confirmLocator).sendKeys(email);
-        driver.findElement(passLocator).sendKeys(password);
-        driver.findElement(nameLocator).sendKeys(name);
-        driver.findElement(dayLocator).sendKeys(day);
-        Select monthList = new Select(driver.findElement(monthListLocator));
-        monthList.selectByIndex(11);
-        driver.findElement((yearLocator)).sendKeys(year);
+        driver.findElement(By.id("email")).sendKeys(email);
+        driver.findElement(By.id("confirm")).sendKeys(email);
+        driver.findElement(By.id("password")).sendKeys(password);
+        driver.findElement(By.id("displayname")).sendKeys(name);
+        driver.findElement(By.id("day")).sendKeys(day);
+        Select monthList = new Select(driver.findElement(By.id("month"))); monthList.selectByIndex(11);
+        driver.findElement((By.id("year"))).sendKeys(year);
 
         driver.findElement(By.xpath("//*[@id=\"__next\"]/main/div/div/form/fieldset/div/div[1]/label/span[1]")).click();
         driver.findElement(By.xpath("//*[@id=\"__next\"]/main/div/div/form/div[6]/div/label/span[1]")).click();
         driver.findElement(By.xpath("//*[@id=\"__next\"]/main/div/div/form/div[8]/div/button/span[1]")).click();
+        driver.findElement(By.xpath("//*[@id=\"__next\"]/main/div/div/form/div[7]/div/label/span[1]")).click();
 
         System.out.println("Registro completo");
 
